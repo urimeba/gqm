@@ -18,10 +18,10 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView # new
 
 urlpatterns = [  
-    path('', TemplateView.as_view(template_name='home.html'), name='home'), 
-    path('poll', TemplateView.as_view(template_name='poll.html'), name='poll'),
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='home.html'), name='home'), 
+    path('poll', TemplateView.as_view(template_name='poll/poll.html'), name='poll'),
     path('accounts/', include('django.contrib.auth.urls')), 
     path('results', TemplateView.as_view(template_name='results.html'), name='results'), 
-    path('statistics', TemplateView.as_view(template_name='statistics.html'), name='statistics')
+    path('statistics', TemplateView.as_view(template_name='statistics/statistics.html'), name='statistics')
 ]
