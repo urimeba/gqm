@@ -55,7 +55,7 @@ ROOT_URLCONF = 'gqm.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'Templates')],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,7 +83,7 @@ DATABASES = {
         'NAME':'gqm',
         'HOST':'127.0.0.1',
         'USER':'root',
-        'PASSWORD':'',
+        'PASSWORD':'root',
         'PORT':'3306'
     }
 }
@@ -127,3 +127,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'Static'),)
+
+LOGIN_REDIRECT_URL = '/'

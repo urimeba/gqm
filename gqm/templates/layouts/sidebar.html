@@ -1,0 +1,46 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element text-center">
+                    {% load static %}
+                    <img alt="image" class="rounded-circle" src="{% static 'img/user.png' %}"/>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="block m-t-xs font-bold">Nombre Usuario</span>
+                        <span class="text-muted text-xs block">Usuario rol<b class="caret"></b></span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs"> 
+                        <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    GQM
+                </div>
+            </li>
+            <li class="active">
+                <a href="{% url 'home' %}">
+                    <i class="fa fa-flag-o"></i> 
+                    <span class="nav-label">Metas</span> 
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'statistics' %}">
+                    <i class="fa fa-th-list"></i> 
+                    <span class="nav-label">Cuestionario</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'statistics' %}">
+                    <i class="fa fa-area-chart"></i> 
+                    <span class="nav-label">Estadisticos</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'results' %}">
+                    <i class="fa fa-check"></i> 
+                    <span class="nav-label">Resultados</span>
+                </a>
+            </li>   
+        </ul>
+    </div>
+</nav>
