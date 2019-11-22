@@ -1,0 +1,25 @@
+{% extends 'registration/base.html' %}
+{% block title %}Registrarse{% endblock %}
+{% block content %}
+    <div>
+        <div>
+            <h3 class="text-center">Bienvenido GQM</h3>
+        </div>
+            <p>Inciar sesión</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+             {{ form.username }}
+            </div>
+            <div class="form-group">
+                {{form.password}}
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b">
+                Registrarse
+            </button>
+            <a class="btn btn-sm btn-white btn-block" href="#">
+                Iniciar sesión
+            </a>
+        </form>
+    </div>
+{% endblock %}
