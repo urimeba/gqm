@@ -9,7 +9,12 @@
         <h5 class="font-weight-bold">Metas</h5>
       </div>
       <div class="ibox-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        {% for meta in metas %}
+          <b>Meta General {{meta.id}}: </b> {{meta.descripcionGeneral}}
+        {% endfor %}
+        <!-- <b>Meta General 1</b>: Obtención de la certificación “CSSLP (Certified Secure Software Lifecycle Professional)” que costará $600DLS por persona, pensando en 100 empleados, con cursos previos a esta certificación en el área de Desarrollo para ganar reconocimiento nacional en el área tri estatal previo a la fecha de diciembre de 2022.
+        <b>Meta General 2</b>: Obtener certificación CMMI-Dev en el nivel #3 a través del departamento de “Desarrollo”, dentro de la fecha límite del mes de diciembre del año 2024 para así poder obtener contratos y licitaciones con  el Departamento de Defensa Nacional de Los Estados Unidos de América, con un costo de $19,200DLS a $32,000DLS. -->
+
       </div>
     </div>
   </div>
@@ -21,18 +26,19 @@
         <h5 class="font-weight-bold">Contexto</h5>
       </div>
       <div class="ibox-content">
-        <p>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        <p class="text-justify">
+          {% for contex in contexto %}
+            {{contex.descripcion}}
+          {% endfor %}
+          
         </p>
       </div>
       <div class="ibox-footer">
         <div class="text-right">
-          <button type="button" class="btn btn-w-m btn-rounded btn-success">Comenzar - Cuestionario</button>
+          <a href="{% url 'poll' %}">
+              <button type="button" class="btn btn-w-m btn-rounded btn-success">Comenzar - Cuestionario</button>
+          </a>
+          
         </div>
       </div>
     </div>

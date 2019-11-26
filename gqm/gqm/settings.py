@@ -83,7 +83,7 @@ DATABASES = {
         'NAME':'gqm',
         'HOST':'127.0.0.1',
         'USER':'root',
-        'PASSWORD':'root',
+        'PASSWORD':'',
         'PORT':'3306'
     }
 }
@@ -128,4 +128,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'Static'),)
 
+LOGIN_URL = 'loginn'
 LOGIN_REDIRECT_URL = '/'

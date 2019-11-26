@@ -12,13 +12,16 @@
                     <form id="form" class="wizard">
                         <div class="steps clearfix">
                             <ul role="tablist">
-                                <li role="tab" class="first current" aria-disabled="false" aria-selected="true">
-                                    <a id="form-t-0" href="#form-h-0" aria-controls="form-p-0">
+                                {% for meta in metas %}
+                                <li role="tab" id="{{meta.id}}" onclick="getPreguntas(this.id)" class="first current" aria-disabled="false" aria-selected="true">
+                                    <a aria-controls="form-p-0">
                                         <span class="current-info audible">Seccion actual: </span>
-                                        <span class="number">Seccion 1</span> 
+                                        <span class="number">{{meta.abreviacion}}</span> 
                                     </a>
-                                </li>
-                                <li role="tab" class="disabled" aria-disabled="true">
+                                </li>   
+                                {% endfor %}
+                                
+                                <!-- <li role="tab" class="disabled" aria-disabled="true">
                                     <a id="form-t-1" href="#form-h-1" aria-controls="form-p-1">
                                         <span class="number">Seccion 2</span>
                                     </a>
@@ -32,13 +35,13 @@
                                     <a id="form-t-3" href="#form-h-3" aria-controls="form-p-3">
                                         <span class="number">Seccionn 4</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <fieldset>
                             <div class="content bg-transparent">
-                                <h4 class="py-3">Preguntas de la seccion 1</h4>
-                                <div class="form-group row">
+                                <h4 class="py-3">Seccion de Preguntas</h4>
+                                <!-- <div class="form-group row">
                                     <label class="col-lg-8 col-form-label">¿Esta es la primera pregunta ?</label>
                                     <div class="col-sm-4">
                                         <select class="form-control m-b small form-control-sm" name="questions[]">
@@ -73,6 +76,19 @@
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-8 col-form-label">¿Esta es la primera pregunta ?</label>
+                                    <div class="col-sm-4">
+                                        <select class="form-control m-b small form-control-sm" name="questions[]">
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                        </select>
+                                    </div>
+                                </div> -->
                             </div>
                         </fieldset>
                         <div class="actions clearfix">
@@ -80,8 +96,8 @@
                                 <li class="disabled" aria-disabled="true">
                                     <a href="#previous" role="menuitem">Anterior</a>
                                 </li>
-                                <li aria-hidden="false" aria-disabled="false">
-                                    <a href="#next" role="menuitem">Siguiente</a>
+                                <li onclick="setMetricas()" aria-hidden="false" aria-disabled="false">
+                                    <a href="{% url 'statistics' %}" role="menuitem">Siguiente</a>
                                 </li>
                                 <li aria-hidden="true" style="display: none;">
                                     <a href="#finish" role="menuitem">Finalizar - Cuestionario</a>
@@ -92,6 +108,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 {% load static %}

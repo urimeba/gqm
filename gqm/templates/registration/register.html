@@ -5,19 +5,19 @@
         <div>
             <h3 class="text-center">Bienvenido GQM</h3>
         </div>
-            <p>Inciar sesión</p>
+            <p>Registro</p>
         <form method="post">
             {% csrf_token %}
             <div class="form-group">
-             {{ form.username }}
+                <input type="text">
             </div>
             <div class="form-group">
-                {{form.password}}
+                <input type="password">
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">
                 Registrarse
             </button>
-            <a class="btn btn-sm btn-white btn-block" href="#">
+            <a class="btn btn-sm btn-white btn-block" href="{% url 'loginn' %}">
                 Iniciar sesión
             </a>
         </form>
