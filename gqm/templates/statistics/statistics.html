@@ -7,6 +7,15 @@
             <div class="ibox ">
                 <div class="ibox-title">
                     <h5>Resultados</h5>
+
+                    <a href="{% url 'results' %}">
+                            <button style="background: #1BB394; color: white; border: none; width:10%; height: 100%; margin-left: 80%; border-radius:5px;">
+                                    Siguiente
+                                </button>
+                    </a>
+
+                    
+                    
                 </div>
                 <div class="ibox-content">
                     <div>
@@ -34,12 +43,18 @@ $(document).ready(function () {
             bindto: '#lineChart',
             data:{
                 columns: [
-                    ['Situacion ideal', 100, 600, 600, 600, 600, 600, 600, 600, 600, 600,600, 150, 600 ],
+                    ['Situacion ideal', 94, 589, 574, 590, 587, 578, 592, 578, 588, 597,578, 592, 590 ],
                     ['Situacion actual', ...metricas ]
                 ],
                 colors:{
                     data1: '#1ab394',
                     data2: '#BABABA'
+                }
+            },
+            axis: {
+                x:{
+                    type: 'category',
+                    categories: ['Productividad', 'Inversion','Retorno', 'Preparacion', 'Costos', 'Areas dom', 'Prod. Dev.', 'Certificados', 'Metodologias', 'Seguridad', 'Errores', 'Certificados', 'Satisfacción']
                 }
             }
         });
@@ -50,12 +65,22 @@ $(document).ready(function () {
             bindto: '#lineChart',
             data:{
                 columns: [
-                    ['Situacion ideal', 100, 100, 100, 100, 100, 100, 100, 100, 100 ],
+                    ['Situacion ideal', 89, 98, 85, 78, 87, 92, 87, 96, 100 ],
                     ['Situacion actual', ...metricas ]
                 ],
                 colors:{
                     data1: '#1ab394',
                     data2: '#BABABA'
+                }
+
+
+
+                
+            },  
+            axis: {
+                x:{
+                    type: 'category',
+                    categories: ['Necesidad', 'Licitación','Preparación', 'Madurez', 'Estándares', '#KPI', 'Procesamiento', 'Productividad', 'Satisfacción']
                 }
             }
         });

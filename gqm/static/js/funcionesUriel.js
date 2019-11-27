@@ -14,6 +14,28 @@ function getCookie(name) {
     return cookieValue;
 }
 
+function registrar(){
+    let usuario = document.getElementById("usuario").value;
+    let contraseña = document.getElementById("contraseña").value;
+    
+    if(usuario!="" && contraseña!=""){
+        let token = getCookie('csrftoken');
+
+        $.ajax({ 
+            type: 'POST',
+            url: 'register',
+            data: {usuario:usuario, contraseña:contraseña, csrfmiddlewaretoken: token},
+            success: function(data){
+                alert(data);
+            }
+        });
+
+    }else{
+        alert("Favor de llenar los campos.");
+    }
+
+}
+
 function iniciarSesion(){
 
     let usuario = document.getElementById("usuario").value;
@@ -51,10 +73,10 @@ function getPreguntas(id){
         string+= '<label class="col-lg-8 col-form-label">¿Cual es la productividad actual?</label>';
         string+= '<div class="col-sm-4">';
         string+= '<select class="form-control m-b small form-control-sm" name="questions[]">';
-        string+= '<option value=25>25% o menos</option>';
-        string+= '<option value=50>50% o menos</option>';
-        string+= '<option value=75>75% o menos</option>';
-        string+= '<option value=100>100%</option>';
+        string+= '<option value=150>25% o menos</option>';
+        string+= '<option value=350>50% o menos</option>';
+        string+= '<option value=450>75% o menos</option>';
+        string+= '<option value=600>100%</option>';
         string+= '</select>';
         string+= '</div>';
         string+= '</div>';
@@ -185,10 +207,10 @@ function getPreguntas(id){
         string+= '<label class="col-lg-8 col-form-label">¿Cuántos errores/amenazas de programación se encuentran en código por proyecto?</label>';
         string+= '<div class="col-sm-4">';
         string+= '<select class="form-control m-b small form-control-sm" name="questions[]">';
-        string+= '<option value="150">5 o menos</option>';
-        string+= '<option value="300">10 o menos</option>';
-        string+= '<option value="450">15 o menos</option>';
-        string+= '<option value="600">20 o menos</option>';
+        string+= '<option value="600">5 o menos</option>';
+        string+= '<option value="450">10 o menos</option>';
+        string+= '<option value="300">15 o menos</option>';
+        string+= '<option value="150">20 o menos</option>';
         string+= '</select>';
         string+= '</div>';
         string+= '</div>';

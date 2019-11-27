@@ -1,151 +1,8 @@
 {% extends 'base.html' %}
 {% block title %}Resultados{% endblock %}
 {% block content %}
+{% load staticfiles %}
 <div class="wrapper wrapper-content animated fadeIn">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="ibox">
-                <div class="ibox-title">
-                    <h5 class="font-weight-bold">Mediciones</h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="ibox-content forum-container">
-                    <div class="forum-title">
-                        <div class="float-right forum-desc">
-                            <samll>Nivel de impacto</samll>
-                        </div>
-                        <h3>Situacion actual</h3>
-                    </div>
-                    <div class="forum-item">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="forum-icon">
-                                    <i class="fa fa-check"></i>
-                                </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <span>Impacto</span>
-                                    <div class="stat-percent">61%</div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success" style="width: 25%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="forum-item">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="forum-icon">
-                                    <i class="fa fa-exclamation-triangle"></i>
-                                </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-warning" style="width: 25%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="forum-item">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="forum-icon">
-                                    <i class="fa fa-times"></i>
-                                </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-danger" style="width: 50%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="ibox">
-                <div class="ibox-title">
-                    <h5 class="font-weight-bold"></h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="ibox-content forum-container">
-                    <div class="forum-title">
-                        <div class="float-right forum-desc">
-                            <samll>Nivel de impacto</samll>
-                        </div>
-                        <h3>Como mejorar</h3>
-                    </div>
-                    <div class="forum-item">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="forum-icon">
-                                    <i class="fa fa-check"></i>
-                                </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-success" style="width: 25%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="forum-item">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="forum-icon">
-                                    <i class="fa fa-exclamation-triangle"></i>
-                                </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-warning" style="width: 25%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="forum-item">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="forum-icon">
-                                    <i class="fa fa-times"></i>
-                                </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-danger" style="width: 50%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="ibox">
@@ -162,7 +19,7 @@
                         <div class="float-right forum-desc">
                             <samll>Nivel de impacto</samll>
                         </div>
-                        <h3>Riesgos</h3>
+                        <h3>Conclusiones</h3>
                     </div>
                     <div class="forum-item">
                         <div class="row">
@@ -170,13 +27,17 @@
                                 <div class="forum-icon">
                                     <i class="fa fa-check"></i>
                                 </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
+                                <a href="forum_post.html" class="forum-item-title">Progreso general</a>
+                                <div class="forum-sub-title">Progreso necesario para alcanzar las metricas ideales que permitan alcanzar las metas sin problemas</div>
                             </div>
                             <div class="col-md-4">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-success" style="width: 25%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <div>
+                                    <span>Impacto</span>
+                                    <div class="stat-percent" id="porcentaje"></div>
+                                    <div class="progress">
+                                        <div id="progreso" class="progress-bar progress-bar-success" style="width: 25%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>               
                             </div>
                         </div>
                     </div>
@@ -186,12 +47,12 @@
                                 <div class="forum-icon">
                                     <i class="fa fa-exclamation-triangle"></i>
                                 </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
+                                <a href="forum_post.html" class="forum-item-title">Areas de Oportunidad</a>
+                                <div class="forum-sub-title" id="oportunidad">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
                             </div>
                             <div class="col-md-4">
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-warning" style="width: 25%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-warning" id="chartOportunidad" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -202,25 +63,116 @@
                                 <div class="forum-icon">
                                     <i class="fa fa-times"></i>
                                 </div>
-                                <a href="forum_post.html" class="forum-item-title">General Discussion</a>
-                                <div class="forum-sub-title">Talk about sports, entertainment, music, movies, your favorite color, talk about enything.</div>
+                                <a href="forum_post.html" class="forum-item-title">Amenazas</a>
+                                <div class="forum-sub-title" id="amenazas">Productividad</div>
                             </div>
                             <div class="col-md-4">
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-danger" style="width: 50%" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-danger" id="chartAmenazas" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <p id="conclusion">Hola</p>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="row">
        <div class="col-lg-12 text-right">
-            <a class="btn btn-outline-warning text-dark text-secondary">Realizar de nuevo</a>
-            <a class="btn btn-info text-light ml-2">Finalizar - encuesta</a>
+            <a href="{% url 'home' %}" class="btn btn-outline-warning text-dark text-secondary">Realizar de nuevo</a>
+            <a href="{% url 'cerrarSesion' %}" class="btn btn-info text-light ml-2">Finalizar - encuesta</a>
        </div>
     </div>
 </div>
+
+<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+<script>
+    window.onload=function(){
+        let metricas = localStorage.getItem("metricas");
+        metricas = JSON.parse(metricas);
+        metricas = JSON.parse(metricas);
+
+        if(metricas.length==13){
+            var suma = 0;
+
+            for(var x = 0; x < metricas.length; x++){
+                suma += metricas[x];
+            }
+            let promedio = suma / metricas.length;
+            let porcentajePromedio = (promedio * 100) / 600
+            let porcentaje = document.getElementById("porcentaje");
+            porcentaje.innerHTML=porcentajePromedio.toFixed(2) + "%";
+            let progreso = document.getElementById("progreso");
+            progreso.style.width = porcentajePromedio.toFixed(2) + "%";
+
+            porcentajeAmenazas = (100 - porcentajePromedio)/2;
+
+            a = document.getElementById("chartOportunidad")
+            a.style.width=porcentajeAmenazas.toFixed(2)+'%';
+            b = document.getElementById("chartAmenazas")
+            b.style.width=porcentajeAmenazas.toFixed(2)+'%';
+
+
+            if(porcentajePromedio>0 && porcentajePromedio<33.33){
+                document.getElementById("oportunidad").innerHTML="Productividad General, Costos, Areas de dominio, Certificaciones, Metodologias, Seguridad, Errores, Certificados";
+                document.getElementById("amenazas").innerHTML="Inversion, Retorno de inversion, Preparacion, Satisfaccion";
+                document.getElementById("conclusion").innerHTML="La estrategia seguida hasta el momento no es la correcta. Es necesario verificar modelo de negocio y madurez de los procesos. Se recomienda verificar direccion del nivel operativo y su productividad.";
+            }
+            else if(porcentajePromedio>33.33 && porcentajePromedio<66.66){
+                document.getElementById("oportunidad").innerHTML="Productividad General, Costos, Certificaciones, Metodologias, Errores";
+                document.getElementById("amenazas").innerHTML="Retorno de inversion, Preparacion, Satisfaccion";
+                document.getElementById("conclusion").innerHTML="La continuacion de areas de oportunidad es indispensable para la mejora continua. Asi, la estrategia llevada hasta ahora lleva a la empresa por buen camino, teniendo mejoras que producir con estandares inculcados como cultura empresarial y motivacion al personal operativo. Se recomienda llevar a cabo este proceso para mejorar indices de productividad.";
+            }
+            else{
+                document.getElementById("oportunidad").innerHTML="Productividad General, Metodologias";
+                document.getElementById("amenazas").innerHTML="Satisfaccion";
+                document.getElementById("conclusion").innerHTML="Las areas de oportunidad segun este modelo de negocio y estandares usados se reducen drasticamente. Asi, se recomienda optar por obtener la certificacion requerida de inmediato para poder continuar con el proceso de mejora continua. Ademas, de obtener la certificacion es recomendable optar por ser parte del equipo que permite certificar a otras entidad, obteniendo mayor reconocimiento nacional";
+            }
+        }
+        else{
+            var suma = 0;
+
+            for(var x = 0; x < metricas.length; x++){
+                suma += metricas[x];
+            }
+            let promedio = suma / metricas.length;
+            console.log(promedio)
+
+            let porcentaje = document.getElementById("porcentaje");
+            porcentaje.innerHTML=promedio.toFixed(2) + "%";
+            let progreso = document.getElementById("progreso");
+            progreso.style.width = promedio.toFixed(2) + "%";
+
+            porcentajeAmenazas = (100 - promedio)/2;
+
+            a = document.getElementById("chartOportunidad")
+            a.style.width=porcentajeAmenazas.toFixed(2)+'%';
+            b = document.getElementById("chartAmenazas")
+            b.style.width=porcentajeAmenazas.toFixed(2)+'%';
+
+            if(promedio>0 && promedio<33.33){
+                document.getElementById("oportunidad").innerHTML="Preparacion, Madurez, Estandares, KPI, Procesamiento";
+                document.getElementById("amenazas").innerHTML="Licitacion, Proyeccion, Productividad, Satisfaccion";
+                document.getElementById("conclusion").innerHTML="La certificacion CMMI-Dev exige estandares que al momento no se cumplen. Se deshecha la idea de tratar de obtener esta y replantear la madurez de todos los procesos involucrados en el desarrollo, asi como reeplantearlos e incluso modificarlos de raiz, cambiando asi la estructura de jerarquias de la empresa, ademas de mejorar el indice de KPIs usados, obteniendo disciplina dentro de los equipos de desarrollo de software";
+            }
+            else if(promedio>33.33 && promedio<66.66){
+                document.getElementById("oportunidad").innerHTML=" Madurez, KPI, Procesamiento";
+                document.getElementById("amenazas").innerHTML="Licitacion, Satisfaccion";
+                document.getElementById("conclusion").innerHTML="Al momento la empresa cuenta con niveles aceptables de madurez de los procesos, contenidos como niveles medios que la certificacion obtiene. Es posible participar para obtener la certificacion, mas no recomendable, debido a la falta de certeza de madurez para un establecimiento correcto con bases cimentadas. Sera necesario analizar a fondo proceso completo de desarrollo para verificar metricas de calidad, tiempo, satisfaccion y productividad.";
+            }
+            else{
+                document.getElementById("oportunidad").innerHTML=" Madurez, KPI";
+                document.getElementById("amenazas").innerHTML="Satisfaccion";
+                document.getElementById("conclusion").innerHTML="La probabildiad de obtener la certificacion CMMI es muy alta. Es necesario permitir la obtencion de esta certificacion actualmente. Aun asi, las mejoras continuas dependen de la necesidad del grado de madurez de los procesos, siendo los mas altos los mas dificiles de alcanzar, todo esto mediante procesos robustos que permitan el crecimiento vertical y horizontal de la empresa, sin restringir demasiado la misma mejora continua.";
+            }
+
+        }
+
+
+    }
+
+    
+</script>
 {% endblock %}

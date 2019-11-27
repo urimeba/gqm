@@ -9,14 +9,15 @@
         <form method="post">
             {% csrf_token %}
             <div class="form-group">
-                <input type="text">
+                <input id="usuario" type="text">
             </div>
             <div class="form-group">
-                <input type="password">
+                <input id="contraseña" type="password">
             </div>
-            <button type="submit" class="btn btn-primary block full-width m-b">
+            <input onclick="registrar()" type="button" class="btn btn-primary block full-width m-b" value="Registrarse">
+            <!-- <button type="submit" class="btn btn-primary block full-width m-b">
                 Registrarse
-            </button>
+            </button> -->
             <a class="btn btn-sm btn-white btn-block" href="{% url 'loginn' %}">
                 Iniciar sesión
             </a>
