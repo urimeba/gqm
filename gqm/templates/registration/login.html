@@ -1,11 +1,13 @@
 {% extends 'registration/base.html' %}
 {% block title %}Inciar sesíon{% endblock %}
 {% block content %}
+{% load staticfiles %}
     <div>
+        <img src="{% static 'img/question.png' %}" height="150px;" style="margin-bottom: 10px;" alt="">
         <div>
-            <h3 class="text-center">Bienvenido GQM</h3>
+            <h3 class="text-center">Bienvenido a AnalytIQ</h3>
         </div>
-            <p>Inciar sesión</p>
+            <p>Iniciar sesión</p>
         <form method="post">
             {% csrf_token %}
             <div class="form-group">
